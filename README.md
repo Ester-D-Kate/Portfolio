@@ -31,7 +31,7 @@ Open http://localhost:3000 after the container starts.
 
 ## Share previews
 
-The site includes Open Graph and Twitter card metadata plus a 1536×1024 social preview image at `public/og.png`. Set the public HTTPS URL before deploying so shared links resolve to the correct canonical URL and preview image:
+The site includes Open Graph and Twitter card metadata plus a compressed 1200×800 JPEG social preview image at `public/og.jpg`. Set the public HTTPS URL before deploying so shared links resolve to the correct canonical URL and preview image:
 
     NEXT_PUBLIC_SITE_URL=https://your-domain.example
 

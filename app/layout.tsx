@@ -43,9 +43,10 @@ export const metadata: Metadata = {
     url: siteUrl,
     images: [
       {
-        url: "/og.png",
-        width: 1536,
-        height: 1024,
+        url: "/og.jpg",
+        width: 1200,
+        height: 800,
+        type: "image/jpeg",
         alt: "Arunya — Agentic and Zero-Knowledge engineering portfolio",
       },
     ],
@@ -54,7 +55,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: socialTitle,
     description: socialDescription,
-    images: ["/og.png"],
+    images: ["/og.jpg"],
   },
   robots: {
     index: true,
