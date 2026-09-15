@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
-    <section className="relative mx-auto grid min-h-[min(900px,100svh)] w-[min(1280px,calc(100%-1.5rem))] items-center gap-10 pb-20 pt-36 md:w-[min(1280px,calc(100%-3rem))] md:grid-cols-[.9fr_1.1fr] md:pb-12 md:pt-28" id="top">
+    <section className="relative mx-auto grid min-h-[min(900px,100svh)] w-[min(1280px,calc(100%-1.5rem))] items-center gap-10 pb-20 pt-36 md:w-[min(1280px,calc(100%-3rem))] md:grid-cols-[.9fr_1.1fr] md:grid-rows-[1fr_auto] md:pb-12 md:pt-28" id="top">
       <div className="relative z-10 max-w-xl">
         <p className="mb-7 font-mono text-[.68rem] font-bold uppercase tracking-[.13em] text-mocha">
           Agentic Engineering · Zero-Knowledge (ZK) · Hardware
@@ -34,7 +34,7 @@ export function Hero() {
         </div>
       </div>
       <CoffeeScene />
-      <div className="absolute bottom-7 left-0 right-0 hidden items-end justify-between gap-6 border-t border-line pt-4 pr-4 text-[.68rem] font-bold uppercase tracking-[.11em] text-muted md:flex">
+      <div className="hidden items-end justify-between gap-6 border-t border-line pt-4 pr-4 text-[.68rem] font-bold uppercase tracking-[.11em] text-muted md:col-span-2 md:flex">
         <p className="shrink-0">Based in Amritsar, India<br />Building everywhere.</p>
         <p className="flex min-w-0 items-center justify-end gap-2 text-right leading-5">
           <span className="size-2 shrink-0 rounded-full bg-sage" />
