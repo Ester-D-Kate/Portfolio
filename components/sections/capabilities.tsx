@@ -8,7 +8,7 @@ export function Capabilities() {
       <SectionHeading
         eyebrow="What I work with · 02"
         title="Across the whole machine."
-        copy="The interesting problems rarely stay inside one discipline. Neither do I."
+        copy="The interesting problems rarely stay inside one discipline. I often start with zero knowledge, then learn the process by building, testing, and understanding each layer."
         titleClassName="max-w-[36rem]"
         copyClassName="max-w-[26rem]"
       />
