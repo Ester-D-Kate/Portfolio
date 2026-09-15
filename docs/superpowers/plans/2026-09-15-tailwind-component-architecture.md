@@ -181,5 +181,5 @@ Files:
 - [ ] Step 1: Delete obsolete header, card, grid, section, and typography selectors. Keep Tailwind import, theme variables, document base styles, SVG masks, art keyframes, and reduced-motion rules.
 - [ ] Step 2: Update README with Bun commands, Tailwind v4, UI primitives, site components, localhost usage, and the frontend-only boundary.
 - [ ] Step 3: Run bun run lint, bunx tsc --noEmit, and bun run build. All must exit 0.
-- [ ] Step 4: Start bun run dev -- --port 5001 and verify desktop and 390px mobile widths: no overflow, mobile Sheet behavior, visible focus rings, correct projects/links, aligned ’23—now, cat hover motion, reduced motion, and no console errors.
+- [ ] Step 4: Start bun run dev and verify desktop and 390px mobile widths: no overflow, mobile Sheet behavior, visible focus rings, correct projects/links, aligned ’23—now, cat hover motion, reduced motion, and no console errors.
 - [ ] Step 5: Record final status and localhost URL. Do not deploy.

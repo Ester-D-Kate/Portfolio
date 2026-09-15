@@ -4,11 +4,13 @@ import { SectionHeading } from "@/components/site/section-heading";
 export function Capabilities() {
   const ticker = ["FastAPI", "ESP32", "RAG", "OpenCV", "ROS", "TypeScript", "MQTT", "Circuits"];
   return (
-    <section className="mx-auto w-[min(1280px,calc(100%-1.5rem))] py-24 md:w-[min(1280px,calc(100%-3rem))] md:py-36" id="capabilities">
+    <section className="mx-auto w-[min(1760px,calc(100%-1.5rem))] py-24 md:w-[min(1760px,calc(100%-3rem))] md:py-36" id="capabilities">
       <SectionHeading
         eyebrow="What I work with · 02"
         title="Across the whole machine."
         copy="The interesting problems rarely stay inside one discipline. Neither do I."
+        titleClassName="max-w-[36rem]"
+        copyClassName="max-w-[26rem]"
       />
       <div className="grid gap-px overflow-hidden rounded-[2rem] border border-line bg-line md:grid-cols-2">
         {skillGroups.map((group, index) => (

@@ -1,13 +1,22 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteUrl = "http://localhost:5001";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const siteTitle = "Arunya — Agentic Engineer & Zero-Knowledge (ZK) Engineer";
+const siteDescription =
+  "Arunya is an Agentic Engineer and Zero-Knowledge (ZK) Engineer building autonomous AI systems, privacy systems, embedded electronics, robotics, and assistive technology.";
+const socialTitle = "Arunya — Intelligence you can touch";
+const socialDescription =
+  "Agentic systems, zero-knowledge systems, circuits, and robots. Complex systems, brewed with patience.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Arunya — Agentic Engineer & Zero-Knowledge (ZK) Engineer",
-  description:
-    "Arunya is an Agentic Engineer and Zero-Knowledge (ZK) Engineer building autonomous AI systems, privacy systems, embedded electronics, robotics, and assistive technology.",
+  title: siteTitle,
+  description: siteDescription,
+  applicationName: "Arunya Portfolio",
+  alternates: {
+    canonical: siteUrl,
+  },
   keywords: [
     "Arunya",
     "Agentic Engineer",
@@ -26,10 +35,11 @@ export const metadata: Metadata = {
     shortcut: "https://avatars.githubusercontent.com/u/148463665?v=4",
   },
   openGraph: {
-    title: "Arunya — Intelligence you can touch",
-    description:
-      "Agentic systems, zero-knowledge systems, circuits, and robots. Complex systems, brewed with patience.",
+    title: socialTitle,
+    description: socialDescription,
     type: "website",
+    siteName: "Arunya Portfolio",
+    locale: "en_IN",
     url: siteUrl,
     images: [
       {
@@ -42,10 +52,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arunya — Intelligence you can touch",
-    description:
-      "Agentic systems, zero-knowledge systems, circuits, and robots. Complex systems, brewed with patience.",
+    title: socialTitle,
+    description: socialDescription,
     images: ["/og.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

@@ -16,18 +16,26 @@ A local-first Next.js portfolio for Arunya, an Agentic Engineer and Zero-Knowled
 ## Run locally
 
     bun install
-    bun run dev -- --port 5001
+    bun run dev
 
-Open http://localhost:5001.
+Open http://localhost:3000.
 
 ## Build and run with Docker
 
 The production image follows AudioFlow's landing-page pattern: Bun installs and builds the Next.js app, then a small Node runtime serves the generated standalone server.
 
-    docker build -t arunya-portfolio .
-    docker run --rm -p 5001:5001 arunya-portfolio
+    docker build --build-arg NEXT_PUBLIC_SITE_URL=https://your-domain.example -t arunya-portfolio .
+    docker run --rm -p 3000:3000 arunya-portfolio
 
-Open http://localhost:5001 after the container starts.
+Open http://localhost:3000 after the container starts.
+
+## Share previews
+
+The site includes Open Graph and Twitter card metadata plus a 1536×1024 social preview image at `public/og.png`. Set the public HTTPS URL before deploying so shared links resolve to the correct canonical URL and preview image:
+
+    NEXT_PUBLIC_SITE_URL=https://your-domain.example
+
+The local fallback is `http://localhost:3000`, which is useful for development but should not be used for a public deployment. For a Docker build, pass the public URL as the `NEXT_PUBLIC_SITE_URL` build argument shown above so the prerendered HTML contains public canonical and preview URLs.
 
 ## Verify
 
