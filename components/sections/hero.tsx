@@ -34,9 +34,12 @@ export function Hero() {
         </div>
       </div>
       <CoffeeScene />
-      <div className="absolute bottom-7 left-0 right-0 hidden items-end justify-between border-t border-line pt-4 text-[.68rem] font-bold uppercase tracking-[.11em] text-muted md:flex">
-        <p>Based in Amritsar, India<br />Building everywhere.</p>
-        <p className="flex items-center gap-2"><span className="size-2 rounded-full bg-sage" /> Open to ambitious experiments</p>
+      <div className="absolute bottom-7 left-0 right-0 hidden items-end justify-between gap-6 border-t border-line pt-4 pr-4 text-[.68rem] font-bold uppercase tracking-[.11em] text-muted md:flex">
+        <p className="shrink-0">Based in Amritsar, India<br />Building everywhere.</p>
+        <p className="flex min-w-0 items-center justify-end gap-2 text-right leading-5">
+          <span className="size-2 shrink-0 rounded-full bg-sage" />
+          <span>Open to ambitious experiments</span>
+        </p>
       </div>
     </section>
   );
