@@ -25,6 +25,18 @@ const iconPaths: Record<Exclude<ProjectIcon, "cat" | "audio">, string> = {
   "heart-pulse": "/project-icons/heart-pulse.svg",
 };
 
+function getSourceLabel(source: Project["source"]) {
+  if (source === "release") {
+    return "Release build";
+  }
+
+  if (source === "private") {
+    return "Private build";
+  }
+
+  return "Open source build";
+}
+
 function ProjectIconMark({ icon }: { icon: ProjectIcon }) {
   if (icon === "cat") {
     return (
@@ -104,19 +116,19 @@ export function ProjectCard({
         </ul>
       </CardContent>
       <CardFooter className="justify-between gap-4 border-t border-current/10 px-6 py-5 md:px-8">
-        <span className="text-xs font-semibold text-muted">
-          {project.source === "release" ? "Release build" : "Open source build"}
-        </span>
+        <span className="text-xs font-semibold text-muted">{getSourceLabel(project.source)}</span>
         <div className="flex flex-wrap items-center justify-end gap-4">
-          <a
-            className="inline-flex items-center gap-2 text-xs font-bold text-mocha transition hover:gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mocha"
-            href={project.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={"Open " + project.name + " on GitHub"}
-          >
-            Repository <Arrow />
-          </a>
+          {project.href ? (
+            <a
+              className="inline-flex items-center gap-2 text-xs font-bold text-mocha transition hover:gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mocha"
+              href={project.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={"Open " + project.name + " on GitHub"}
+            >
+              Repository <Arrow />
+            </a>
+          ) : null}
           {project.liveHref ? (
             <a
               className="inline-flex items-center gap-2 text-xs font-bold text-mocha transition hover:gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mocha"

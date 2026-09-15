@@ -26,7 +26,7 @@ export function About() {
           ["’23—now", "learning by making"],
         ].map(([value, label]) => (
           <div className="flex min-h-40 items-end justify-between gap-5 border-line p-5 md:min-h-52 md:border-r md:p-7 last:md:border-r-0" key={value}>
-            <strong className="font-serif text-5xl tracking-[-.06em] md:text-7xl">{value}</strong>
+            <strong className="whitespace-nowrap font-serif text-5xl tracking-[-.06em] md:text-7xl">{value}</strong>
             <span className="max-w-32 text-right text-xs leading-5 text-muted">{label}</span>
           </div>
         ))}

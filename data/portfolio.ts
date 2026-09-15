@@ -14,27 +14,28 @@ export type Project = {
   type: string;
   description: string;
   stack: string[];
-  href: string;
+  href?: string;
   liveHref?: string;
   tone: string;
   icon: ProjectIcon;
   status: "Completed" | "Working demo";
-  source: "open-source" | "release";
+  source: "open-source" | "release" | "private";
 };
 
 export const completedProjects: Project[] = [
   {
     number: "01",
-    name: "Eye Tracker",
-    type: "Assistive eye tracking",
+    name: "AudioFlow",
+    type: "Voice workflow desktop app",
     description:
-      "My strongest project: a robust pupil-tracking system for gaze estimation and hands-free interaction, built to work across real-world lighting, resolution, and calibration constraints.",
-    stack: ["Python", "OpenCV", "NumPy", "Pupil Detection"],
-    href: "https://github.com/Kate-D-Ester/gaze-core",
+      "A focused desktop voice workflow that turns spoken thoughts into formatted, usable text while keeping language, custom vocabulary, screen context, and highlighted text in view.",
+    stack: ["Next.js", "Bun", "Deepgram", "OpenRouter"],
+    href: "https://github.com/Ester-D-Kate/audio-flow-releases/releases",
+    liveHref: "https://audioflow.in/",
     tone: "cream",
-    icon: "eye",
+    icon: "audio",
     status: "Completed",
-    source: "open-source",
+    source: "release",
   },
   {
     number: "02",
@@ -64,17 +65,15 @@ export const completedProjects: Project[] = [
   },
   {
     number: "04",
-    name: "AudioFlow",
-    type: "Voice workflow desktop app",
+    name: "Eye Tracker",
+    type: "Assistive eye tracking",
     description:
-      "A focused desktop voice workflow that turns spoken thoughts into formatted, usable text while keeping language, custom vocabulary, screen context, and highlighted text in view.",
-    stack: ["Next.js", "Bun", "Deepgram", "OpenRouter"],
-    href: "https://github.com/Ester-D-Kate/audio-flow-releases/releases",
-    liveHref: "https://audioflow.in/",
+      "My strongest project: a robust pupil-tracking system for gaze estimation and hands-free interaction, built to work across real-world lighting, resolution, and calibration constraints.",
+    stack: ["Python", "OpenCV", "NumPy", "Pupil Detection"],
     tone: "cream",
-    icon: "audio",
+    icon: "eye",
     status: "Completed",
-    source: "release",
+    source: "private",
   },
 ];
 
